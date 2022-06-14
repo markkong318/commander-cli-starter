@@ -1,0 +1,43 @@
+{
+  "name": "commander-cli-starter",
+  "version": "1.0.0",
+  "description": "boilerplate for cli program for node",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "cd test && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markkong318/commander-cli-starter.git"
+  },
+  "author": "markkong318",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
+    "lodash": "^4.17.21",
+    "mkdirp": "^1.0.4",
+    "moment": "^2.29.3",
+    "strip-color": "^0.1.0",
+    "update-notifier": "^5.1.0",
+    "walk-sync": "^3.0.0",
+    "wcwidth": "^1.0.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "ajv": "^8.11.0",
+    "bats-assert": "^2.0.0",
+    "bats-support": "^0.3.0",
+    "jasmine": "^4.1.0",
+    "mock-fs": "^5.1.2",
+    "nock": "^13.2.4",
+    "sinon": "^14.0.0"
+  },
+  "bin": {
+    "commander-cli-starter": "src/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/markkong318/commander-cli-starter/issues"
+  },
+  "homepage": "https://github.com/markkong318/commander-cli-starter#readme"
+}
