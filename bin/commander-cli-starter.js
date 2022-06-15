@@ -23,7 +23,7 @@ async function runCmd(command) {
 if (process.argv.length < 3) {
   console.log('\x1b[31m', 'You have to provide name to your app.');
   console.log('For example:');
-  console.log('    npx react-parcel-app my-app', '\x1b[0m');
+  console.log('    npx commander-cli-starter my-app', '\x1b[0m');
   process.exit(1);
 }
 
@@ -38,7 +38,7 @@ try {
   if (err.code === 'EEXIST') {
     console.log(
       '\x1b[31m',
-      `The file ${appName} already exist in the current directory, please give it another name.`,
+      `The file ${folderName} already exist in the current directory, please give it another name.`,
       '\x1b[0m'
     );
   } else {
@@ -74,7 +74,8 @@ async function setup() {
 
     console.log('\x1b[34m', 'You can start by typing:');
     console.log(`    cd ${folderName}`);
-    console.log('    npm start', '\x1b[0m');
+    console.log('    npm install -g .');
+    console.log(`    ${folderName}`, '\x1b[0m');
     console.log();
     console.log('Check Readme.md for more informations');
     console.log();
@@ -87,21 +88,22 @@ setup();
 
 function buildPackageJson(packageJson, folderName) {
   const {
-    bin,
-    keywords,
-    license,
-    homepage,
-    repository,
-    bugs,
-    ...newPackage
+    dependencies,
+    devDependencies,
+    main,
+    scripts,
   } = packageJson;
 
-  Object.assign(newPackage, {
+  const newPackage = {
     name: folderName,
     version: '1.0.0',
     description: '',
+    main,
+    scripts,
     author: '',
-  });
+    dependencies,
+    devDependencies,
+  }
 
   fs.writeFileSync(
     `${process.cwd()}/package.json`,

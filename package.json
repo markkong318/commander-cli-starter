@@ -1,6 +1,6 @@
 {
   "name": "commander-cli-starter",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "boilerplate for cli program for node",
   "main": "src/index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "sinon": "^14.0.0"
   },
   "bin": {
-    "commander-cli-starter": "src/index.js"
+    "commander-cli-starter": "bin/commander-cli-starter.js"
   },
   "bugs": {
     "url": "https://github.com/markkong318/commander-cli-starter/issues"
