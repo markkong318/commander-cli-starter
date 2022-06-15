@@ -13,8 +13,7 @@ let data = {};
 let isInit = false;
 
 const allowKeys = [
-  'secret',
-  'refreshToken',
+  'baz',
 ];
 
 const get = (key, defaultValue) => {
